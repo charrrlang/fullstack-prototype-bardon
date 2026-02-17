@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Account</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Yvone Bardon</h1>
+        <div class="auth-group">
+            <a href="login.html" class="login-button">Login</a>
+            <a href="register.html" class="register-button">Register</a>
+        </div>
+    </header>
+
+ 
+    <section class="form-container">
+        <div class="form-box">
+            <h2>Register Account</h2>
+            <form action=""> 
+                <div class="input-group">
+                    <label>First Name</label>
+                    <input type="text" name="first_name" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Last Name</label>
+                    <input type="text" name="last_name" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Email</label>
+                    <input type="email" name="email" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Password</label>
+                    <input type="password" name="password" required>
+                </div>
+            
+            </form>
+                <div>
+
+            <form id="registration-form" action="verify.html">
+                <div class="form-actions">
+                    <button type="submit" class="btn-signup">Sign Up</button>
+                    <a href="index.html" class="btn-cancel">Cancel</a>
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

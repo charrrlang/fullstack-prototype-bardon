@@ -1,0 +1,93 @@
+/* Keeps the logo left and the button group right */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #292727;
+    color: rgb(221, 205, 205);
+}
+
+/* New CSS to stack the buttons */
+.auth-group {
+    display: flex;
+    flex-direction: column; /* This stacks items vertically */
+    gap: 8px;                /* Adds space between the stacked buttons */
+    align-items: flex-end;   /* Aligns them to the right side of the container */
+}
+
+/* Ensure buttons are styled correctly within the stack */
+.login-button, .register-button {
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    width: 100px; /* Optional: Sets a uniform width for buttons */
+    text-align: center;
+     color: #685e5e;
+}
+
+/* Container to center the form on the page */
+.form-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.form-box {
+    width: 100%;
+    max-width: 1000px;
+    border: 1px solid #ddd;
+    padding: 25px;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Important for alignment */
+}
+
+.form-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+
+.btn-signup {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 14px;
+    text-align: center;
+}
+
+.btn-cancel {
+    background-color: white;
+    color: #333;
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+    text-align: center;
+}
+
