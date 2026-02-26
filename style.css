@@ -115,4 +115,68 @@ header {
     text-align: center;
 }
 
+.admin-dropdown {
+    font-size: 0.9rem;
+    color: #adb5bd;
+    cursor: pointer;
+}
+
+.btn-edit {
+    background: transparent;
+    color: #0d6efd;
+    border: 1px solid #0d6efd;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin-top: 15px;
+    transition: 0.2s;
+}
+
+.admin-dropdown {
+    position: relative; /* Crucial: This keeps the menu attached to the word Admin */
+    cursor: pointer;
+    padding: 10px 15px;
+    color: #adb5bd;
+}
+
+.dropdown-menu {
+    display: none;        /* Hide by default */
+    position: absolute;   /* Float over the content */
+    top: 100%;            /* Appear exactly below the header */
+    right: 0;             /* Align to the right edge */
+    background-color: #212529; /* Match the dark header or use #fff for contrast */
+    min-width: 180px;
+    border: 1px solid #444;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    z-index: 1000;
+}
+
+/* 4. Style the individual links inside the menu */
+.dropdown-menu a {
+    color: #fff;          /* White text */
+    padding: 10px 15px;
+    text-decoration: none; /* Remove underline */
+    display: block;       /* Stack them vertically */
+    font-size: 0.9rem;
+    transition: background 0.2s;
+}
+
+/* 5. Hover effects */
+.dropdown-menu a:hover {
+    background-color: #343a40; /* Darker gray on hover */
+    color: #0d6efd;           /* Highlight blue */
+}
+
+/* 6. THE TRIGGER: Show the menu when hovering over the parent div */
+.admin-dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Optional: Logout specific styling */
+.logout-link {
+    border-top: 1px solid #444;
+    color: #ff4d4d !important; /* Red for logout */
+}
 

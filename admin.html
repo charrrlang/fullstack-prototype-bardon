@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Profile - Full-Stack App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="admin-header">
+        <h1>Full-Stack App</h1>
+        <div class="auth-group">
+            <div class="admin-dropdown">
+                Admin <span class="arrow">▾</span>
+                
+                <div class="dropdown-menu">
+                <a href="admin.html">Profile</a>
+                <a href="employees.html">Employees</a>
+                <a href="departments.html">Departments</a>
+                <a href="accounts.html">Accounts</a>
+                <hr>
+                <a href="login.html" class="logout-link">Logout</a>
+            </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1 class="section-title">My Profile</h1>
+        
+        <div class="card">
+            <h2 class="user-display-name">Admin User</h2>
+            <div class="info-list">
+                <p><strong>Email:</strong> admin@example.com</p>
+                <p><strong>Role:</strong> Admin</p>
+            </div>
+            
+            <button class="btn-edit">Edit Profile</button>
+        </div>
+    </main>
+</body>
+</html>
