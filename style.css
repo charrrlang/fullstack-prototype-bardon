@@ -65,6 +65,7 @@ header {
     gap: 15px;
     margin-top: 20px;
     width: 100%;
+    
 }
 
 
@@ -90,4 +91,28 @@ header {
     font-size: 14px;
     text-align: center;
 }
+
+.btn-outline {
+    text-decoration: none;
+    background-color: white;
+    color: #6c757d; /* Gray text from image */
+    border: 1px solid #ced4da; /* Light gray border */
+    padding: 7px 14px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    display: inline-block;
+}
+
+.btn-login {
+    background-color: #0b32e0;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 14px;
+    text-align: center;
+}
+
 

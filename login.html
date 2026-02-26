@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Full-Stack App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+    
+            <h1>Full-Stack App</h1>
+        <div class="auth-group">
+            <a href="login.html" class="login-button">Login</a>
+            <a href="register.html" class="register-button">Register</a>
+        </div>
+    </header>
+
+    <main class="content-wrapper">
+        <div class="alert-box-success">
+            <span class="check-icon">✅</span> Email verified! You may now log in.
+        </div>
+
+        <section class="login-form-container">
+            <h1 class="page-title">Login</h1>
+            
+            <form action="dashboard.html">
+                <div class="input-group">
+                    <label>Email</label>
+                    <input type="email" name="email" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Password</label>
+                    <input type="password" name="password" required>
+                </div>
+
+                <div class="button-row">
+                    <button type="submit" class="btn-login">Login</button>
+                    <a href="index.html" class="btn-cancel">Cancel</a>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
