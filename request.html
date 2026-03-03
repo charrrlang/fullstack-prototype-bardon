@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Requests - Full-Stack App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="admin-header">
+        <h1>Full-Stack (Yvone Bardon)</h1>
+        <div class="auth-group">
+            <div class="admin-dropdown">
+                Admin <span class="arrow">▾</span>
+                <div class="dropdown-menu">
+                    <a href="employees.html">Employees</a>
+                    <a href="departments.html">Departments</a>
+                    <a href="accounts.html">Accounts</a>
+                    <a href="requests.html">Requests</a>
+                    <hr>
+                    <a href="login.html" class="logout-link">Logout</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="content-container">
+        <div class="section-header">
+            <h2>My Requests</h2>
+            <button class="btn-add" id="openModalBtn">+ New Request</button>
+        </div>
+
+        <div class="empty-requests-state">
+            <p>You have no requests yet.</p>
+            <button class="btn-create-one" id="createOneBtn">Create One</button>
+        </div>
+
+        <div class="modal-overlay hidden" id="requestModal">
+            <div class="modal-card">
+                <div class="modal-header">
+                    <h3>New Request</h3>
+                    <span class="close-modal" id="closeModalBtn">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label>Type</label>
+                        <select class="form-control">
+                            <option>Equipment</option>
+                            
+                        </select>
+                    </div>
+                    
+                    <label class="form-label">Items</label>
+                    <div id="itemList">
+                        <div class="item-row">
+                            <input type="text" placeholder="Item name" class="item-input">
+                            <input type="number" value="1" class="qty-input">
+                            <button type="button" class="btn-item add" onclick="addItemRow()">+</button>
+                        </div>
+                    </div>
+
+                    <button class="btn-submit-request" id="submitBtn">Submit Request</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const modal = document.getElementById('requestModal');
+            const openBtn = document.getElementById('openModalBtn');
+            const createBtn = document.getElementById('createOneBtn');
+            const closeBtn = document.getElementById('closeModalBtn');
+
+            // Show modal
+            const openModal = () => {
+                modal.classList.remove('hidden');
+            };
+
+            // Hide modal
+            const closeModal = () => {
+                modal.classList.add('hidden');
+            };
+
+            // Event Listeners
+            if (openBtn) openBtn.addEventListener('click', openModal);
+            if (createBtn) createBtn.addEventListener('click', openModal);
+            if (closeBtn) closeBtn.addEventListener('click', closeModal);
+
+            // Close when clicking the dark background
+            window.addEventListener('click', (e) => {
+                if (e.target === modal) closeModal();
+            });
+
+            // Close on Submit
+            document.getElementById('submitBtn').onclick = () => {
+                alert("Request Submitted!");
+                closeModal();
+            };
+        });
+
+        // Function for dynamic rows
+        function addItemRow() {
+            const container = document.getElementById('itemList');
+            const div = document.createElement('div');
+            div.className = 'item-row';
+            div.innerHTML = `
+                <input type="text" placeholder="Item name" class="item-input">
+                <input type="number" value="1" class="qty-input">
+                <button type="button" class="btn-item remove" onclick="this.parentElement.remove()">×</button>
+            `;
+            container.appendChild(div);
+        }
+    </script>
+</body>
+</html>
